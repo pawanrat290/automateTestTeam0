@@ -10,7 +10,7 @@ ${BROWSER}  Google Chrome
 Open file Excel
     Open Excel    ${CURDIR}\\test_data.xlsx
 Open Project Monitoring System
-    open Browser  ${URL}  ${BROWSER}  
+    Open Browser  ${URL}    ${BROWSER}
     Maximize Browser Window
 Click Menu Login
     sleep   2s
@@ -42,9 +42,7 @@ Fill out detail Project Task
     Input Text   //*[@id="t_detail"]    เสนอราคาชั่วโมงการทำงาน
 Click choose date Project Task
     sleep   5s
-    Click Element   //*[@id="t_createdate"]
-    ${value}=   Get Element Attribute   id=t_createdate     value
-    Should Be Equal As String       ${value}    10/20/2022
+    Press Key   //*[@id="t_createdate"]     ENTER
 Click Add document Project Task
     sleep   2s
     Choose File     id:uploadBtn   ${CURDIR}\\environmentTeam0.jpg

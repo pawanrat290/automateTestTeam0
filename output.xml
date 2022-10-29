@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20221021 22:58:11.709" rpa="false" schemaversion="3">
+<suite id="s1" name="add taskInProject" source="c:\xampp\htdocs\automateTestTeam0\Employee\test_add_taskInProject\add_taskInProject.robot">
+<test id="s1-t1" name="Add Task in Project Success" line="56">
+<kw name="Open file Excel">
+<kw name="Open Excel" library="ExcelRobot">
+<arg>c:\\xampp\\htdocs\\automateTestTeam0\\Employee\\test_add_taskInProject\\test_data.xlsx</arg>
+<doc>Opens the Excel file to read from the path provided in the file path parameter.</doc>
+<msg timestamp="20221021 22:58:13.837" level="INFO">Opening file at c:\xampp\htdocs\automateTestTeam0\Employee\test_add_taskInProject\test_data.xlsx</msg>
+<status status="PASS" starttime="20221021 22:58:13.834" endtime="20221021 22:58:13.868"/>
+</kw>
+<status status="PASS" starttime="20221021 22:58:13.832" endtime="20221021 22:58:13.869"/>
+</kw>
+<kw name="Read Cell Data" library="ExcelRobot">
+<var>${Username}</var>
+<arg>Employee</arg>
+<arg>0</arg>
+<arg>1</arg>
+<doc>Uses the column and row to return the data from that cell.</doc>
+<msg timestamp="20221021 22:58:13.877" level="INFO">${Username} = suchada1512@gmail.com</msg>
+<status status="PASS" starttime="20221021 22:58:13.870" endtime="20221021 22:58:13.877"/>
+</kw>
+<kw name="Read Cell Data" library="ExcelRobot">
+<var>${Password}</var>
+<arg>Employee</arg>
+<arg>1</arg>
+<arg>1</arg>
+<doc>Uses the column and row to return the data from that cell.</doc>
+<msg timestamp="20221021 22:58:13.882" level="INFO">${Password} = suchada</msg>
+<status status="PASS" starttime="20221021 22:58:13.880" endtime="20221021 22:58:13.883"/>
+</kw>
+<kw name="Open Project Monitoring System">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221021 22:58:13.888" level="INFO">Opening browser 'Google Chrome' to base url 'http://dekdee2.informatics.buu.ac.th:9080/team0/'.</msg>
+<status status="PASS" starttime="20221021 22:58:13.887" endtime="20221021 22:58:19.946"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221021 22:58:19.947" endtime="20221021 22:58:20.151"/>
+</kw>
+<status status="PASS" starttime="20221021 22:58:13.886" endtime="20221021 22:58:20.152"/>
+</kw>
+<kw name="Click Menu Login">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221021 22:58:22.181" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221021 22:58:20.155" endtime="20221021 22:58:22.181"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="main-wrapper"]/header/nav/div[2]/ul[2]/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221021 22:58:22.184" level="INFO">Clicking element '//*[@id="main-wrapper"]/header/nav/div[2]/ul[2]/li/a'.</msg>
+<status status="PASS" starttime="20221021 22:58:22.183" endtime="20221021 22:58:24.792"/>
+</kw>
+<status status="PASS" starttime="20221021 22:58:20.153" endtime="20221021 22:58:24.793"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221021 22:58:25.804" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221021 22:58:24.794" endtime="20221021 22:58:25.804"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:u_email</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221021 22:58:25.881" level="INFO">Typing text 'suchada1512@gmail.com' into text field 'id:u_email'.</msg>
+<status status="PASS" starttime="20221021 22:58:25.880" endtime="20221021 22:58:26.884"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221021 22:58:27.907" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20221021 22:58:26.887" endtime="20221021 22:58:27.907"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:u_password</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221021 22:58:27.939" level="INFO">Typing text 'suchada' into text field 'id:u_password'.</msg>
+<status status="PASS" starttime="20221021 22:58:27.938" endtime="20221021 22:58:28.678"/>
+</kw>
+<kw name="Click to Login">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221021 22:58:30.694" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221021 22:58:28.690" endtime="20221021 22:58:30.705"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="loginBtn"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221021 22:58:30.706" level="INFO">Clicking element '//*[@id="loginBtn"]'.</msg>
+<status status="PASS" starttime="20221021 22:58:30.705" endtime="20221021 22:58:30.890"/>
+</kw>
+<status status="PASS" starttime="20221021 22:58:28.689" endtime="20221021 22:58:30.891"/>
+</kw>
+<kw name="Click Sidebar Resiponse Project">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221021 22:58:32.904" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221021 22:58:30.893" endtime="20221021 22:58:32.918"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="sidebarnav"]/li[2]/a/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221021 22:58:32.985" level="INFO">Clicking element '//*[@id="sidebarnav"]/li[2]/a/i'.</msg>
+<msg timestamp="20221021 22:58:33.663" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221021 22:58:33.665" level="FAIL">Element with locator '//*[@id="sidebarnav"]/li[2]/a/i' not found.</msg>
+<status status="FAIL" starttime="20221021 22:58:32.934" endtime="20221021 22:58:33.676"/>
+</kw>
+<status status="FAIL" starttime="20221021 22:58:30.892" endtime="20221021 22:58:33.679"/>
+</kw>
+<kw name="Serch Project">
+<status status="NOT RUN" starttime="20221021 22:58:33.689" endtime="20221021 22:58:33.690"/>
+</kw>
+<kw name="Click Manage Task Project">
+<status status="NOT RUN" starttime="20221021 22:58:33.700" endtime="20221021 22:58:33.700"/>
+</kw>
+<kw name="Click Add Project Task">
+<status status="NOT RUN" starttime="20221021 22:58:33.702" endtime="20221021 22:58:33.702"/>
+</kw>
+<kw name="Click Dropdown Project Task">
+<status status="NOT RUN" starttime="20221021 22:58:33.703" endtime="20221021 22:58:33.704"/>
+</kw>
+<kw name="Click choose Project Task">
+<status status="NOT RUN" starttime="20221021 22:58:33.705" endtime="20221021 22:58:33.705"/>
+</kw>
+<kw name="Fill out detail Project Task">
+<status status="NOT RUN" starttime="20221021 22:58:33.706" endtime="20221021 22:58:33.707"/>
+</kw>
+<kw name="Click choose date Project Task">
+<status status="NOT RUN" starttime="20221021 22:58:33.718" endtime="20221021 22:58:33.719"/>
+</kw>
+<kw name="Click Add document Project Task">
+<status status="NOT RUN" starttime="20221021 22:58:33.721" endtime="20221021 22:58:33.722"/>
+</kw>
+<kw name="Close Browser Page">
+<status status="NOT RUN" starttime="20221021 22:58:33.728" endtime="20221021 22:58:33.729"/>
+</kw>
+<status status="FAIL" starttime="20221021 22:58:13.828" endtime="20221021 22:58:33.732">Element with locator '//*[@id="sidebarnav"]/li[2]/a/i' not found.</status>
+</test>
+<status status="FAIL" starttime="20221021 22:58:11.727" endtime="20221021 22:58:33.750"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="add taskInProject">add taskInProject</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
