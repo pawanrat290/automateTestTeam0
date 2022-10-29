@@ -42,7 +42,8 @@ Fill out detail Project Task
     Input Text   //*[@id="t_detail"]    เสนอราคาชั่วโมงการทำงาน
 Click choose date Project Task
     sleep   5s
-    Press Key   //*[@id="t_createdate"]     ENTER
+    Click Element   //*[@id="t_createdate"]
+    Press Keys      //*[@id="t_createdate"]     ENTER
 Click Add document Project Task
     sleep   2s
     Choose File     id:uploadBtn   ${CURDIR}\\environmentTeam0.jpg
